@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            body 
+{
+  font-family:Arial; 
+  /* background-image:url('https://media.istockphoto.com/id/940993008/vector/abstract-geometric-medical-cross-shape-medicine-and-science-concept-background.jpg?s=612x612&w=0&k=20&c=K6wREAMiRA3V-OGFDFxls9iZZCgL39kwKPxeQEUwT38=');
+            /* background-repeat: repeat; */
+            /* background-size: cover; */ 
+            background-image:url('https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-atmospheric-medical-medical-symbol-gradient-poster-image_202320.jpg');
+            /* background-repeat: repeat; */
+            background-size: cover;
+   background: -webkit-linear-gradient(to right, #155799, #159957); 
+  background: linear-gradient(to right, #155799, #159957);  
+   /* background-image: url('C:\Users\dell\OneDrive\Desktop\learnnode\public\images\hbg.jpg') ;  */
+   color:whitesmoke; 
+}
+.container
+{
+    /* background-image:url('https://media.istockphoto.com/id/940993008/vector/abstract-geometric-medical-cross-shape-medicine-and-science-concept-background.jpg?s=612x612&w=0&k=20&c=K6wREAMiRA3V-OGFDFxls9iZZCgL39kwKPxeQEUwT38=');
+            /* background-repeat: repeat; */
+            background-size: cover; */
+        }
+.mb-3{
+    font-family:Arial;
+    text-emphasis-color: #155799;
+        width: 382px;
+        overflow: hidden;
+        margin: auto;
+        margin: 20 0 0 450px;
+        padding: 8px;
+        background: #159957;
+        border-radius: 15px ;
+
+}
+.mb-3{
+      
+text-align: center;  
+border: 7px ;  
+width: 300px;  
+height: 100px;  
+padding-top: 10px;  
+}  
+
+
+        </style>
+        <title>Login System </title>
+    </head>
+    <body >
+
+        <div class="container">
+            <h1 class="mt-5 mb-5 text-center text-primary" color="#23463f;"><b>Login System </b></h1>
+
+            <div class="row mt-5">
+                <div class="col-md-3">&nbsp;</div>
+                <div class="col-md-6">
+                <% if(session.user_id) { %>
+                  <div class="card-header">Sample Form</div>
+                  <div class="card-body">
+                      <form method="POST" action="/sample_data/<%= sampleData.id %>">
+                        </form>
+                    <h1>Hi User, Welcome</h1>
+
+                    <a href="/logout" class="btn btn-primary" action="/sample_data/">Logout</a>
+
+                <% } else { %>
+
+                    <div class="card">
+                        <div class="card-header">Login</div>
+                        <div class="card-body">
+                            <form method="post" action="/login">
+                                <div class="mb-3">
+                                    <label>Email Address</label>
+                                    <input type="email" name="user_name" class="form-control" />
+                                </div>
+                                <div class="mb-3">
+                                    <label>Password</label>
+                                    <input type="password" name="user_pass" class="form-control" />
+                                </div>
+                                <div class="mb-3">
+                                    <centre><input type="submit" class="btn btn-primary" value="Login" /></centre>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                <% } %>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
